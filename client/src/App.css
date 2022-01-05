@@ -11,6 +11,12 @@ body {
 * {
   margin: 0;
   font-family: "Plus Jakarta Display";
+  color: #333;
+}
+
+select * {
+  background-color: white;
+  color: white;
 }
 
 .container {

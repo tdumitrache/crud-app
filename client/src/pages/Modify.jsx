@@ -210,6 +210,7 @@ const Modify = () => {
               border="1px solid"
               borderColor="#333"
               _hover="none"
+              className="select"
               placeholder="Alege ID Student..."
               onChange={(e) =>
                 setStudentData({

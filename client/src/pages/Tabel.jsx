@@ -53,19 +53,19 @@ const Tabel = () => {
 
   return (
     <Container
-      maxW="1250px"
+      maxW="1440px"
       mx="auto"
       display="flex"
       flexDirection="column"
       justify="center"
     >
-      <Table variant="striped" colorScheme="gray" bg="#fff" padding="12px" mt="24px" borderRadius="18px" boxShadow="rgb(0 0 0 / 2%) 0px 3.5px 5.5px">
-        <Thead >
-          <Tr py="20px">
+      <Table variant="simple" bg="#fff" padding="12px" mt="24px" borderRadius="18px" boxShadow="rgb(0 0 0 / 2%) 0px 3.5px 5.5px">
+        <Thead border="none">
+          <Tr py="20px" border="none">
             {list.length &&
               Object.keys(list[0]).map((thead, index) => {
                 return (
-                  <Th key={index} fontFamily="Plus Jakarta Display" fontSize="18px" py="24px">
+                  <Th key={index} border="none" fontFamily="Plus Jakarta Display" fontSize="18px" py="24px">
                     {thead}
                   </Th>
                 );
@@ -73,9 +73,9 @@ const Tabel = () => {
           </Tr>
         </Thead>
         <Tbody >
-          {list.map((row) => {
+          {list.map((row, index) => {
             return (
-              <Tr borderRadius="20px">
+              <Tr borderRadius="20px" bg={index % 2 !== 0 ? "#fff" : "#f4f4f4"}>
                 {list.length &&
                   Object.values(row).map((td, index) => {
                     return (
